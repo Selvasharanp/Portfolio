@@ -11,7 +11,7 @@ body{
     font-family: "Josefin Sans", serif;
 }
 header{
-    background-color: #011d31;
+    background-color: #022d4c;
     padding: 20px;
     color:#fff;
     display:flex;
@@ -62,6 +62,9 @@ section.hero-section{
     display: flex;
     align-items: center;
     padding: 20px 120px 0 200px;
+}
+.hero-section h4{
+    margin-bottom: 10px;
 }
 .hero-section-title{
     font-size: 45px;
@@ -124,7 +127,7 @@ ul.social-icons{
     color: #1186c1;
 }
 .about-section{
-    background-color:#011d31;
+    background-color:#022d4c;
     color: #fff;
     display: flex;
     justify-content:center;
@@ -164,4 +167,51 @@ ul.social-icons{
 }
 .about-section-desc ul li > a:hover{
     color: #1186c1;
+}
+.work-section{
+    background-color:#031827;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    padding: 50px;;
+}
+.work-section-box{
+    background-color: #022d4c;
+    padding: 50px;
+    max-width: 300px;
+    max-height: 300px;
+    text-align: left;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-right: 60px;
+}
+.work-section-box:hover{
+    background-color: #01233b;
+    border: 1px solid white;
+}
+.work-section-box p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.work-section-box h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.work-section-box a{
+    color: burlywood;
+}
+.work-section h1{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-right:40px;
+}
+.work-section-box-icons{
+    margin-top:20px;
+}
+.work-section-box-icons:hover{
+color: #E4405F;
+}
+.work-section-items{
+    display: flex;
+    justify-content: center;
 }
