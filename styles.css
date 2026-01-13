@@ -1,125 +1,255 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&display=swap');
-:root{
-    bluuuu:#1b4765;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body{
-    font-family: "Josefin Sans", serif;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #031827;
 }
+
+/* Header */
 header{
     background-color: #031827;
-    padding: 20px;
+    padding: 20px 60px;
     color:#fff;
     display:flex;
-    justify-content:space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
+
 .logo{
     color: #1186c1;
-    font-weight: bolder;
-    letter-spacing: 5px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 22px;
 }
+
 header a{
     text-decoration: none;
 }
+
 header ul{
     display: flex;
     list-style: none;
 }
+
 header ul li{
-    margin-right: 20px;
+    margin: 0 15px;
 }
+
 header ul li a{
     color: #fff;
-    text-decoration: none;
-    font-size: larger;
+    font-size: 18px;
 }
-header button{
-    padding: 10px 20px;
-    font-family: "Josefin Sans", serif;
-    background-color: #031827;
-    background-color: #031827;
-    border: 2px solid #1186c1;
-    color: #1186c1;
-    border-radius: 5px;
-}
+
 header ul li a:hover{
     color: #1186c1;
-    font-weight: bold;
 }
+
+header button{
+    padding: 10px 20px;
+    font-family: "Josefin Sans", sans-serif;
+    background: transparent;
+    border: 2px solid #1186c1;
+    color: #1186c1;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
 header button:hover{
-    cursor:pointer;
     background-color: #1186c1;
     color: #fff;
+    cursor: pointer;
 }
-section.hero-section{
-    background-color: #031827;
-    color:#fff;
+
+/* Hero Section */
+.hero-section{
+    min-height: 90vh;
     display: flex;
     align-items: center;
-    padding: 20px 120px 0 200px;
-}
-.hero-section-title{
-    font-size: 45px;
-}
-.hero-section-desc{
-    color:#fff;
-}
-.social-icons{
-    margin: 20px 0;
-}
-.social-icons li{
-    margin-right: 10px;
-}
-ul.social-icons{
-    list-style:none;
-    display: flex;
-}
-.social-icons li > a{
-    text-decoration: none;
+    justify-content: space-between;
+    padding: 40px 80px;
     color: #fff;
 }
-.social-icons li a > i.fa-facebook:hover{
-    color:#1877F2;
-}
-.social-icons li a > i.fa-linkedin:hover{
-    color:#0A66C2;
-}
-.social-icons li a > i.fa-instagram:hover{
-    color:#E4405F;
-}
-.social-icons li a > i.fa-twitter:hover{
-    color:#1DA1F2;
-}
-.btn{
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 2px;
-    cursor:pointer;
-}
-.btn.btn-primary{
-    background-color: #1186c1;
-    font-family:"Josefin Sans", serif;
-}
-.btn.btn-primary:hover{
-    background-color:white;
-    color: black;
-}
-.btn.btn-secondary{
-    background-color:#031827;
-    color:#1186c1;
-    font-family:"Josefin Sans", serif;
-    border: 2px solid #1186c1;
-    
-}
-.btn.btn-secondary:hover{
-    background-color:#1186c1;
-    color: black;
-}
-.hero-section-title > span{
+
+.hero-section h4{
+    font-size: 20px;
     color: #1186c1;
+}
+
+.hero-section-title{
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.hero-section-title span{
+    color: #1186c1;
+}
+
+.hero-section-desc{
+    margin: 15px 0;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+/* Social Icons */
+.social-icons{
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+}
+
+.social-icons li{
+    margin-right: 15px;
+}
+
+.social-icons a{
+    color: #fff;
+    font-size: 20px;
+}
+
+.social-icons i:hover{
+    transform: scale(1.2);
+}
+
+/* Buttons */
+.btn{
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor:pointer;
+    font-family: "Josefin Sans", sans-serif;
+    margin-right: 10px;
+}
+
+.btn-primary{
+    background-color: #1186c1;
+    color: #fff;
+}
+
+.btn-primary:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-secondary{
+    background-color: transparent;
+    color: #1186c1;
+    border: 2px solid #1186c1;
+}
+
+.btn-secondary:hover{
+    background-color: #1186c1;
+    color: #000;
+}
+
+/* Image */
+/* .hero-section img{
+    max-width: 450px;
+} */
+
+/* Footer */
+.foot{
+    text-align: center;
+    padding: 15px;
+    background-color: #02121d;
+    color: #aaa;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    .hero-section{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section img{
+        margin-top: 30px;
+        max-width: 300px;
+    }
+
+    header{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+.projects-section{
+    padding: 80px 60px;
+    background-color: #02121d;
+    color: white;
+}
+
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.project-card{
+    background-color: #031827;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #1186c1;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3{
+    color: #1186c1;
+    margin-bottom: 10px;
+}
+
+.project-card p{
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.project-card .tech{
+    font-size: 13px;
+    color: #8ecbff;
+    margin: 10px 0;
+}
+
+.project-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 0 15px rgba(17,134,193,0.6);
+}
+
+.github-btn{
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    background-color: #1186c1;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.github-btn:hover{
+    background-color: white;
+    color: #031827;
+}
+.cv-btn{
+    padding: 10px 20px;
+    font-family: "Josefin Sans", sans-serif;
+    background: transparent;
+    border: 2px solid #1186c1;
+    color: #1186c1;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cv-btn:hover{
+    background-color: #1186c1;
+    color: white;
 }
